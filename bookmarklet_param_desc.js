@@ -6,9 +6,8 @@ javascript: (function() {
 			$(this).before("<span class=\"altSpan\" style=\"color:black;font-weight:bold;font-family:sans-serif;font-size:small;background-color:yellow;speak:literal-punctuation;\"> INVALID❌alt=\""+$(this).attr('alt')+"\" on "+$(this).prop("tagName")+"</span>");
         });
 		$("svg[role=img]").each(function() {
-            if($(this).children('desc')){
-                console.log($(this).children('desc'));
-                $(this).before("<span class=\"altSpan\" style=\"outline:orange 2px dashed;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:absolute;line-height:100%;z-index:2147483647;speak: literal-punctuation;\">GRAPHIQUE👍desc=\""+$(this).children('desc').val()+"\"❓</span>");
+            if($(this).children('desc').length){
+                $(this).before("<span class=\"altSpan\" style=\"outline:orange 2px dashed;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:absolute;line-height:100%;z-index:2147483647;speak: literal-punctuation;\">GRAPHIQUE👍desc=\""+$(this).children('desc')+"\"❓</span>");
             }else {
                 $(this).before("<span class=\"altSpan\" style=\"outline:red 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:absolute;line-height:100%;z-index:2147483647;border-bottom:2px solid blue;\">SVG❌NO DESC</span>");
             }
