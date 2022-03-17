@@ -7,7 +7,7 @@ javascript: (function() {
         });
 		$("svg[role=img]").each(function() {
             if($(this).children('desc').length){
-		    var idsvg = $(this).attr(id)
+		    var idsvg = $(this).attr('id')
                 $(this).before("<span class=\"altSpan\" style=\"outline:orange 2px dashed;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:absolute;line-height:100%;z-index:2147483647;speak: literal-punctuation;\">GRAPHIQUE👍desc=\""+$('svg[id='+idsvg+'] > desc:first-of-type')+"\"❓</span>");
             }else {
                 $(this).before("<span class=\"altSpan\" style=\"outline:red 2px solid;padding:1px;color:black;font-family:sans-serif;font-weight:bold;font-size:small;background-color:yellow;position:absolute;line-height:100%;z-index:2147483647;border-bottom:2px solid blue;\">GRAPHIQUE❌NO DESC</span>");
